@@ -1,0 +1,29 @@
+{
+  "name": "gymtrack",
+  "version": "1.0.0",
+  "description": "Version of gym tracker that uses node and mongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2016adeshmukh/GymTrackerP2.git"
+  },
+  "keywords": [
+    "node",
+    "mongoDB",
+    "CSS",
+    "Gym",
+    "Trakc"
+  ],
+  "author": "Ankit Deshmukh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2016adeshmukh/GymTrackerP2/issues"
+  },
+  "homepage": "https://github.com/2016adeshmukh/GymTrackerP2#readme",
+  "dependencies": {
+    "mongodb": "^2.2.28"
+  }
+}
