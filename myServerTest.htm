@@ -1,0 +1,29 @@
+
+<div id="bigCont"> 
+	<button onclick = "give()"> Give </button>
+	<button onclick = "take()"> Take </button>
+	<div id = "content"> </div>
+</div>
+
+<script type = "text/javascript">
+	var content = document.getElementById('content');
+	var socket = new WebSocket('ws://localhost:1337');
+
+	function give()
+	{
+		var cars = ["a", "b", "c"];
+		socket.send(cars);
+	}
+	function take()
+	{
+		socket.send('taken');
+		socket.onmessage = function(message)
+		{
+			content.innerHTML += message.data + '<br />';
+		};
+	}
+
+	socket.onerror = function(error){
+		console.log('WebSocket error: ' + error);
+	};
+</script>
